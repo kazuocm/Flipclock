@@ -2,6 +2,9 @@ const hour = document.querySelector('#hour')
 const minute = document.querySelector('#minute')
 const period = document.querySelector('#period')
 const mode = document.querySelector('#mode')
+const elem = document.documentElement
+const max = document.querySelector('#maximize')
+const min = document.querySelector('#minimize')
 
 setInterval(function time(){
     let date = new Date()
@@ -26,6 +29,9 @@ mode.onclick = function(){
     this.classList.toggle('active')
     body.classList.toggle('active')
     line.classList.toggle('active')
+    max.classList.toggle('active')
+    min.classList.toggle('active')
+
     frames.forEach(frame => {
         frame.classList.toggle('active')
     })
@@ -33,3 +39,33 @@ mode.onclick = function(){
         clock.classList.toggle('active')
     })
 }
+
+max.onclick = function(){
+    if(elem.requestFullscreen){
+        elem.requestFullscreen()
+    }else if(elem.mozRequestFullScreen){
+        elem.mozRequestFullScreen()
+    }else if(elem.webkitRequestFullScreen){
+        elem.webkitRequestFullScreen()
+    }else if(elem.msRequestFullScreen){
+        elem.msRequestFullScreen()
+    }
+
+    max.style.display = 'none'
+    min.style.display = 'block'
+}
+
+min.onclick = function() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }else if(elem.mozCancelFullScreen){
+        elem.mozCancelFullScreen()
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+
+    min.style.display = 'none'
+    max.style.display = 'block'
+  }

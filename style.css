@@ -77,3 +77,36 @@ body.active {
 #mode:hover{
     transform: scale(1.2);
 }
+
+#maximize{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#maximize.active{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#maximize:hover{
+    transform: scale(1.2);
+}
+
+#minimize{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    display: none;
+}
+
+#minimize.active{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#minimize:hover{
+    transform: scale(1.2);
+}
