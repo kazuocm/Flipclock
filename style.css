@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100dvh;
+}
+
+#line{
+    background: #000000;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+}
+
+.frame{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 40px ;
+}
+
+#period{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.clock{
+    font-size: 350px;
+    display: flex;
+    align-items: baseline;
+}
+
+#mode{
+    position: fixed;
+    top: 100px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#mode:hover{
+    transform: scale(1.2);
+}
