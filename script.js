@@ -18,5 +18,18 @@ setInterval(function time(){
 })
 
 mode.onclick = function(){
-    mode.classList.add('active')
+    const body = document.querySelector('body')
+    const line = document.querySelector('#line')
+    const frames = document.querySelectorAll('.frame')
+    const clocks = document.querySelectorAll('.clock')
+
+    this.classList.toggle('active')
+    body.classList.toggle('active')
+    line.classList.toggle('active')
+    frames.forEach(frame => {
+        frame.classList.toggle('active')
+    })
+    clocks.forEach(clock=>{
+        clock.classList.toggle('active')
+    })
 }

@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Relógio Digital</title>
+    <title>FLipClock</title>
 </head>
 <body onload="time()">
-    <i id="mode" data-lucide="sun-moon"></i>
-    
+    <div id="mode">
+        <i data-lucide="sun-moon" height="30px" width="30px"></i>
+    </div>
+
     <div id="line"></div>
 
-    <div class="frame" id="hours">
+    <div class="frame">
         <div class="clock">
             <span id="period">
                 am

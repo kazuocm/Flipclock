@@ -13,6 +13,11 @@ body{
     align-items: center;
     gap: 40px;
     height: 100dvh;
+    transition: all ease-in-out 0.4s;
+}
+
+body.active {
+    background: #ffffff;
 }
 
 #line{
@@ -20,6 +25,11 @@ body{
     position: absolute;
     width: 100%;
     height: 8px;
+    transition: all ease-in-out 0.4s;
+}
+
+#line.active{
+    background: #ffffff;
 }
 
 .frame{
@@ -30,6 +40,11 @@ body{
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 40px ;
+    transition: all ease-in-out 0.4s;
+}
+
+.frame.active{
+    background: rgba(0, 0, 0, 0.05);
 }
 
 #period{
@@ -41,15 +56,22 @@ body{
     font-size: 350px;
     display: flex;
     align-items: baseline;
+    transition: all ease-in-out 0.4s;
+}
+
+.clock.active{
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #mode{
     position: fixed;
     top: 100px;
-    width: 40px;
-    height: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+#mode.active{
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #mode:hover{
