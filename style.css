@@ -33,14 +33,15 @@ body.active {
 }
 
 .frame{
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 40px ;
     transition: all ease-in-out 0.4s;
+    padding: 30px;
 }
 
 .frame.active{
@@ -48,12 +49,12 @@ body.active {
 }
 
 #period{
-    font-size: 30px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
 .clock{
-    font-size: 350px;
+    font-size: 550px;
     display: flex;
     align-items: baseline;
     transition: all ease-in-out 0.4s;
@@ -65,7 +66,7 @@ body.active {
 
 #mode{
     position: fixed;
-    top: 100px;
+    top: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
